@@ -18,10 +18,18 @@ public class EnemyAI : MonoBehaviour
 
     private Transform nextWaypoint;
 
+    // Shooting Mechanics
+    private float timeBetweenShots;
+    public float startTimeBetweenShots;
+
+    public GameObject bullet;
+
     // Start is called before the first frame update
     void Start()
     {
         nextWaypoint = waypoint1;
+
+        timeBetweenShots = startTimeBetweenShots;
     }
 
     // Update is called once per frame
@@ -44,12 +52,24 @@ public class EnemyAI : MonoBehaviour
             }
             else if (TargetAquired())
             {
-            currentState = "Attack";
+                currentState = "Attack";
             }
         } 
         
         else if (currentState == "Attack")
         {
+            if (TargetAquired())
+            {
+                if (timeBetweenShots <= 0)
+                {
+                    Instantiate(bullet, transform.position, transform.rotation);
+                    timeBetweenShots = startTimeBetweenShots;
+                }
+                else
+                {
+                    timeBetweenShots -= Time.deltaTime;
+                }
+            }
             if (!TargetAquired())
             {
                 currentState = "Patrol";
