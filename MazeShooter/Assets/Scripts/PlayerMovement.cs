@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
 
     public float speed;
+
+    public float playerHealth;
 
     private Rigidbody2D rigidbody;
 
@@ -26,5 +29,23 @@ public class PlayerMovement : MonoBehaviour
         position.y += speed * Time.deltaTime * inputY;
 
         transform.position = position;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Win Zone")
+        {
+            SceneManager.LoadScene("WinScreen");
+        }
+
+        if (collision.tag == "Enemy")
+        {
+            playerHealth--;
+        }
+
+        if(playerHealth <= 0)
+        {
+            SceneManager.LoadScene("EndScreen");
+        }
     }
 }
