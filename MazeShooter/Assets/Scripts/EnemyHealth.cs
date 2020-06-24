@@ -37,6 +37,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.tag == "Bullet")
         {
+            FindObjectOfType<AudioManager>().Play("EnemyDeathSound");
             GotHitTrue();
             enemyHP -= 1;
             Invoke("GotHitFalse", 1f);
