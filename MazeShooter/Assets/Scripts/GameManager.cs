@@ -21,4 +21,14 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("GameScreen");
     }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("GameScreen");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
