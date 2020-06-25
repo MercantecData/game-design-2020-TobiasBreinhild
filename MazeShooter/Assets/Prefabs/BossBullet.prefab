@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3360605490758205818}
   - component: {fileID: 1797679020632335064}
   m_Layer: 0
-  m_Name: BossBullet 1
+  m_Name: BossBullet
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,4 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae8b1278f5e2bf4195253ebd83d9259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 10

@@ -17,6 +17,7 @@ public class Shoot : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
+            FindObjectOfType<AudioManager>().Play("PlayerShoot");
             GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
 
             Rigidbody2D rigidbody = bullet.GetComponent<Rigidbody2D>();

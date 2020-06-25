@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6307165685187001877}
   - component: {fileID: 4654177717577090756}
   - component: {fileID: 7521611997815945137}
+  - component: {fileID: 898086765812808174}
   m_Layer: 0
   m_Name: BossPufferFish
   m_TagString: Enemy
@@ -136,3 +137,24 @@ MonoBehaviour:
   enemyHP: 50
   anim: {fileID: 0}
   gotHitByBullet: 0
+--- !u!114 &898086765812808174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6410822207075747604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3402b031fdba64dbf0ee865c7ba3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoint1: {fileID: 0}
+  waypoint2: {fileID: 0}
+  speed: 1
+  range: 7
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
+  startTimeBetweenShots: 0.5
+  bullet: {fileID: 5604098588007730034, guid: 5d6d2ed5f08550b4e8b72c21bfd56cde, type: 3}

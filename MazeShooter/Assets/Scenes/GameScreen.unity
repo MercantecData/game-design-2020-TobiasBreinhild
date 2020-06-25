@@ -375,6 +375,36 @@ Transform:
   m_Father: {fileID: 1815445487}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &186254533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 186254534}
+  m_Layer: 0
+  m_Name: BossWaypoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &186254534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186254533}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6, y: -1.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1815445487}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &203568099
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +438,12 @@ MonoBehaviour:
   - name: EnemyDeathSound
     clip: {fileID: 8300000, guid: 1cfb668529549864d853f79665f37420, type: 3}
     volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerShoot
+    clip: {fileID: 8300000, guid: 313f96aa3f90a9f48b8a7aad24cabc97, type: 3}
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -14335,6 +14371,8 @@ Transform:
   - {fileID: 281995461}
   - {fileID: 551405718}
   - {fileID: 1278727289}
+  - {fileID: 186254534}
+  - {fileID: 1928377921}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14397,6 +14435,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1815445487}
   m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1928377920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1928377921}
+  m_Layer: 0
+  m_Name: BossWaypoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1928377921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928377920}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6, y: -10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1815445487}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1941022321
 GameObject:
@@ -14974,6 +15042,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 898086765812808174, guid: 94203690e1f68c84fbcabad1a0415257,
+        type: 3}
+      propertyPath: waypoint1
+      value: 
+      objectReference: {fileID: 186254534}
+    - target: {fileID: 898086765812808174, guid: 94203690e1f68c84fbcabad1a0415257,
+        type: 3}
+      propertyPath: waypoint2
+      value: 
+      objectReference: {fileID: 1928377921}
+    - target: {fileID: 898086765812808174, guid: 94203690e1f68c84fbcabad1a0415257,
+        type: 3}
+      propertyPath: range
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6410822207075747604, guid: 94203690e1f68c84fbcabad1a0415257,
         type: 3}
