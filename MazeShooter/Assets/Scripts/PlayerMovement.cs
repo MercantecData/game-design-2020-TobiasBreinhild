@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class PlayerMovement : MonoBehaviour
     public float playerHealth;
 
     private Rigidbody2D rigidbody;
+
+    public Image img1;
+
+    public Image img2;
+
+    public Image img3;
 
     // Start is called before the first frame update
     void Start()
@@ -43,8 +50,19 @@ public class PlayerMovement : MonoBehaviour
             playerHealth--;
         }
 
-        if(playerHealth <= 0)
+        if (playerHealth == 2)
         {
+            img1.enabled = false;
+        }
+
+        if (playerHealth == 1)
+        {
+            img2.enabled = false;
+        }
+
+        if (playerHealth <= 0)
+        {
+            img3.enabled = false;
             SceneManager.LoadScene("EndScreen");
         }
     }
